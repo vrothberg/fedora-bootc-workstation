@@ -1,0 +1,11 @@
+{
+  "extends": ["config:base"],
+  "description": "Config to group Docker image version and digest updates into a single pull request.",
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["digest", "major", "minor", "patch"],
+      "groupName": "{{depName}} Docker updates"
+    }
+  ]
+}
