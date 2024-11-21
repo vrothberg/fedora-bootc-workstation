@@ -1,4 +1,4 @@
 [customizations.installer.kickstart]
 contents = """
-ostreecontainer --url quay.io/vrothberg/fedora-bootc-workstation:41
+graphical
 """
