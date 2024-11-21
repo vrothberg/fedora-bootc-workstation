@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-bootc:41@sha256:5aed3ee3cb05929dd33e2067a19037d8fe06dee7687b7c61739f88238dacc9c5
+FROM quay.io/fedora/fedora-bootc:42@sha256:88c9a77c566e043b1c49bfda9bfbcc603520aef7e860d2fadd84fff5f14831ad
 
 #install rpmfusion
 RUN dnf install -y \
