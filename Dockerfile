@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-bootc:41
+FROM quay.io/fedora/fedora-bootc:41@sha256:ef5fd46ac0e84b4760c8f5a30fc088c65f49b926ba5e57b5e14aeb85b67618ff
 
 #install rpmfusion
 RUN dnf install -y \
@@ -11,7 +11,6 @@ RUN dnf group install -y \
 	virtualization
 
 RUN dnf install -y \
-	gnome-terminal \
 	neovim \
 	tmate \
 	tmux
