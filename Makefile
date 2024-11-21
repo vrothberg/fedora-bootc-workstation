@@ -8,6 +8,10 @@ BIB_IMAGE ?= quay.io/centos-bootc/bootc-image-builder:latest
 oci-image:
 	podman build --platform linux/$(ARCH) -t $(OCI_IMAGE) .
 
+.PHONY: push-oci-image
+push-oci-image:
+	podman push $(OCI_IMAGE)
+
 # See https://github.com/osbuild/bootc-image-builder
 .PHONY: disk-image
 disk-image:
