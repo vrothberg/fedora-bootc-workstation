@@ -4,7 +4,7 @@
   "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["digest", "major", "minor", "patch"],
+      "matchUpdateTypes": ["digest", "minor", "patch"],
       "groupName": "{{depName}} Docker updates"
     }
   ]
