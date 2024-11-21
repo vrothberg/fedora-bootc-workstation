@@ -24,6 +24,7 @@ RUN dnf group install -y \
 	workstation-product
 
 RUN dnf install -y \
+	bash-completion \
 	neovim \
 	strace \
 	tmate \
