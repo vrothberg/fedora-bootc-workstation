@@ -19,8 +19,8 @@ RUN dnf group install -y \
 	hardware-support \
 	multimedia \
 	networkmanager-submodules \
-	virtualization \
 	printing \
+	virtualization \
 	workstation-product
 
 RUN dnf install -y \
@@ -28,6 +28,7 @@ RUN dnf install -y \
 	neovim \
 	strace \
 	tmate \
-	tmux
+	tmux \
+	vgrep
 
 RUN systemctl set-default graphical.target
