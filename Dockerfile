@@ -25,6 +25,7 @@ RUN dnf group install -y \
 
 RUN dnf install -y \
 	bash-completion \
+	htop \
 	neovim \
 	strace \
 	tmate \
