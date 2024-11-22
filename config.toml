@@ -1,4 +1,0 @@
-[customizations.installer.kickstart]
-contents = """
-graphical
-"""

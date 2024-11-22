@@ -1,0 +1,8 @@
+[customizations.installer.kickstart]
+contents = """
+graphical
+
+%post
+bootc switch --mutate-in-place --transport registry @@IMAGE@@
+%end
+"""

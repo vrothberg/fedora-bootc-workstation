@@ -16,6 +16,7 @@ push-oci-image:
 .PHONY: disk-image
 disk-image:
 	mkdir -p ./output
+	sed -e 's;@@IMAGE@@;$(OCI_IMAGE);g' config.toml.in > config.toml
 	podman run \
 		--rm \
 		-it \
