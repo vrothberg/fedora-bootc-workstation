@@ -33,3 +33,7 @@ RUN dnf install -y \
 	vgrep
 
 RUN systemctl set-default graphical.target
+
+RUN rm -rf /var/run && ln -s /run /var/
+RUN ls -la /var/run
+RUN bootc container lint
