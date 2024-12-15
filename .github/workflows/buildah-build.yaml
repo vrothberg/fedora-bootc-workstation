@@ -1,0 +1,23 @@
+name: Build OCI Image
+on: [push]
+
+jobs:
+  build:
+    name: Build image
+    runs-on: ubuntu-latest
+
+    steps:
+    # https://github.com/orgs/community/discussions/25678
+    - name: Delete huge unnecessary tools folder
+      run: rm -rf /opt/hostedtoolcache
+
+    - uses: actions/checkout@v4
+
+    - name: Buildah Action
+      uses: redhat-actions/buildah-build@v2
+      with:
+        image: my-new-image
+        tags: build
+        oci: true
+        containerfiles: |
+          ./Dockerfile
