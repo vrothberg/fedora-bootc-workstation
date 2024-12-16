@@ -34,6 +34,12 @@ RUN dnf install -y \
 
 RUN systemctl set-default graphical.target
 
+# See https://fedoraproject.org/wiki/Changes/UnprivilegedUpdatesAtomicDesktops:
+#     Avoid annoying popups when logged in.
+RUN dnf install -y fedora-release-ostree-desktop
+
+# Close once https://gitlab.com/fedora/bootc/base-images/-/issues/28 is merged and released in the base image
 RUN rm -rf /var/run && ln -s /run /var/
-RUN ls -la /var/run
+
+# Final lint step to prevent easy-to-catch issues at build time
 RUN bootc container lint
