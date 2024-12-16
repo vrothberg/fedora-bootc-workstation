@@ -1,7 +1,7 @@
 OCI_IMAGE ?= quay.io/vrothberg/fedora-bootc-workstation:41
 DISK_TYPE ?= anaconda-iso
 ROOTFS ?= xfs
-ARCH ?= amd64
+ARCH ?= arm64
 BIB_IMAGE ?= quay.io/centos-bootc/bootc-image-builder:latest
 
 .PHONY: oci-image
