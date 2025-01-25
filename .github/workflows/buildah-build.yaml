@@ -20,4 +20,4 @@ jobs:
         tags: build
         oci: true
         containerfiles: |
-          ./Dockerfile
+          ./Containerfile
