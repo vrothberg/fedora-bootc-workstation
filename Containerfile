@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-bootc:41@sha256:cc748b9d292ac05947fcf48ab9a44c467e4f9dc3e68837ad44a1d558cdd30a3f
+FROM quay.io/fedora/fedora-bootc:41@sha256:bfa6801783345b1e5f5ad9834f10ca1f100fee876eb48b4d84a5bd21445e50c2
 
 # Make sure that the rootfiles package can be installed
 RUN mkdir -p /var/roothome /data
