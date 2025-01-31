@@ -2,7 +2,7 @@
 contents = """
 graphical
 
-%post
+%post --erroronfail
 bootc switch --mutate-in-place --transport registry @@IMAGE@@
 %end
 """
