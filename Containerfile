@@ -21,7 +21,8 @@ RUN dnf group install -y \
 	networkmanager-submodules \
 	printing \
 	virtualization \
-	workstation-product
+	workstation-product \
+	; dnf -y clean all
 
 RUN dnf install -y \
 	bash-completion \
@@ -30,13 +31,15 @@ RUN dnf install -y \
 	strace \
 	tmate \
 	tmux \
-	vgrep
+	vgrep \
+	; dnf -y clean all
 
 RUN systemctl set-default graphical.target
 
 # See https://fedoraproject.org/wiki/Changes/UnprivilegedUpdatesAtomicDesktops:
 #     Avoid annoying popups when logged in.
-RUN dnf install -y fedora-release-ostree-desktop
+RUN dnf install -y fedora-release-ostree-desktop \
+	; dnf -y clean all
 
 # Resize windows on super+mouse-right-click
 RUN gsettings set org.gnome.desktop.wm.preferences resize-with-right-button "true"
