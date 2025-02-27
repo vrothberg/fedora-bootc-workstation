@@ -26,6 +26,7 @@ RUN dnf group install -y \
 
 RUN dnf install -y \
 	bash-completion \
+	bcc-tools \
 	htop \
 	neovim \
 	strace \
