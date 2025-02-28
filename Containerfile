@@ -45,5 +45,10 @@ RUN dnf install -y fedora-release-ostree-desktop \
 # Resize windows on super+mouse-right-click
 RUN gsettings set org.gnome.desktop.wm.preferences resize-with-right-button "true"
 
+# Install all RPMs in ./additional_rpms
+RUN --mount=type=bind,source=./additional_rpms,target=/additional_rpms,Z \
+	dnf -y --disablerepo='*' install --skip-unavailable /additional_rpms/*.rpm \
+	; dnf -y clean all
+
 # Final lint step to prevent easy-to-catch issues at build time
 RUN bootc container lint
