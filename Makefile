@@ -1,4 +1,4 @@
-OCI_IMAGE ?= quay.io/vrothberg/fedora-bootc-workstation:41
+OCI_IMAGE ?= quay.io/vrothberg/fedora-bootc-workstation:42
 DISK_TYPE ?= anaconda-iso
 ROOTFS ?= xfs
 ARCH ?= amd64
